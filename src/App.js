@@ -1,14 +1,31 @@
-import logo from "./logo.svg";
-import "./App.css";
+import Header from "./components/Header/Header";
+import Layout from "./components/Loyout/Layout";
+import Footer from "./components/Footer/Footer";
 
-function App() {
+import urlBg from "../src/assets/bg2.jpeg";
+// import "./App.css";
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello World, ReactJS!</p>
-      </header>
-    </div>
+    <>
+      <Header title={"This is title"} descr={"This is Description!"} />
+      <Layout
+        title={"This is title"}
+        descr={"This is Description!"}
+        urlBg={urlBg}
+      />
+      <Layout
+        title={"This is title"}
+        descr={"This is Description!"}
+        colorBg={"#e2e2e2 "}
+      />
+      <Layout
+        title={"This is title"}
+        descr={"This is Description!"}
+        urlBg={urlBg}
+      />
+      <Footer />
+    </>
   );
 }
 
