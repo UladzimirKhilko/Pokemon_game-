@@ -1,6 +1,6 @@
 import s from "./style.module.css";
 
-const Loyout = ({ title, descr, colorBg, urlBg }) => {
+const Loyout = ({ title, colorBg, urlBg, children }) => {
   console.log(urlBg);
   const bg = urlBg
     ? { background: `url(${urlBg})` }
@@ -13,9 +13,7 @@ const Loyout = ({ title, descr, colorBg, urlBg }) => {
             <h3>{title}</h3>
             <span className={s.separator}></span>
           </div>
-          <div className="desc full">
-            <p>{descr}</p>
-          </div>
+          <div className={`${s.desc} ${s.full}`}>{children}</div>
         </article>
       </div>
     </section>
